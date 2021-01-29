@@ -45,7 +45,7 @@ export default {
       cellList: [
         {
           title: "我的就诊人",
-          to: "/menu",
+          to: "/patientList",
           icon: "manager",
         },
         {

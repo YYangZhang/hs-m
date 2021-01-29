@@ -12,19 +12,19 @@
         :fixed="true"
         :route="true"
       >
-        <van-tabbar-item name="service" to="/menu">
+        <van-tabbar-item name="service" to="/menu" :replace="true">
           医疗服务
           <template #icon>
             <i class="iconfont iconyiyuan tarbaricon"></i>
           </template>
         </van-tabbar-item>
-        <van-tabbar-item name="info" to="/info">
+        <van-tabbar-item name="info" to="/info" :replace="true">
           医院信息
           <template #icon>
             <i class="iconfont iconHospital tarbaricon"></i>
           </template>
         </van-tabbar-item>
-        <van-tabbar-item name="user" to="/user">
+        <van-tabbar-item name="user" to="/user" :replace="true">
           个人中心
           <template #icon>
             <i class="iconfont iconzhanghao tarbaricon"></i>
@@ -38,7 +38,7 @@
 export default {
   data() {
     return {
-      active: "service",
+      active: "service"
     };
   },
   watch: {},

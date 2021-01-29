@@ -33,7 +33,7 @@ export default {
   .contentDiv{
       width: 100%;
       height: 100%;
-      border-bottom: #ebedf0 1px solid;
+      // border-bottom: #ebedf0 1px solid;
   }
 }
 </style>

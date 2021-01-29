@@ -55,6 +55,24 @@ const routes = [{
         },
         component: () => import('@/views/publicService/newsList')
     },
+    {
+        // 新闻详情页面
+        path: '/newsDetail',
+        name: 'newsDetail',
+        component: () => import('@/views/publicService/newsDetail')
+    },
+    {
+        // 就诊人列表
+        path: '/patientList',
+        name: 'patientList',
+        component: () => import('@/views/patient/patientList')
+    },
+    {
+        // 新增、编辑就诊人
+        path: '/patientEdit',
+        name: 'patientEdit',
+        component: () => import('@/views/patient/patientEdit')
+    },
 ]
 
 const router = new VueRouter({

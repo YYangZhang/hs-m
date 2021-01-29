@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-button plain hairline type="primary" @click="$router.push('/menu')" >细边框按钮</van-button>
+    <van-button plain hairline type="primary" @click="$router.replace('/menu')" >细边框按钮</van-button>
   </div>
 </template>
 <script>

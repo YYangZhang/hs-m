@@ -24,7 +24,7 @@
           <van-swipe-item
             v-for="(item, index) in noticeList"
             :key="index"
-            @click="gotoNews(item.code)"
+            @click="gotoNews(item.id)"
           >
             {{ item.title }}
           </van-swipe-item>
@@ -59,12 +59,13 @@
 </template>
 <script>
 import serviceTitle from "../component/serviceTitle";
-import { imageList, noticeList, serviceList } from "./data";
+import { imageList, serviceList } from "./data";
+import { newsList } from "../publicService/data";
 export default {
   data() {
     return {
       imageList: imageList,
-      noticeList: noticeList,
+      noticeList: newsList,
       serviceList: serviceList,
     };
   },
@@ -72,8 +73,11 @@ export default {
   components: { serviceTitle },
   computed: {},
   methods: {
-    gotoNews(code) {
-      console.log(code);
+    gotoNews(id) {
+      this.$router.push({
+        path: "/newsDetail",
+        query: { id: id },
+      });
     },
     goto(url) {
       if (url) {
@@ -108,9 +112,6 @@ export default {
       line-height: 40px;
     }
   }
-  .gridDiv:last-child {
-    margin-bottom: 10px;
-  }
   .gridDiv {
     width: 100%;
     margin-top: 10px;
@@ -143,6 +144,9 @@ export default {
         color: #333333;
       }
     }
+  }
+  .gridDiv:last-child {
+    margin-bottom: 10px;
   }
 }
 </style>

@@ -5,23 +5,23 @@ export const imageList = [
     require("../../assets/img/4.jpg"),
     require("../../assets/img/5.jpg"),
 ]
-export const noticeList = [{
-        title: "这是一首简单的小情歌，唱着人们心头的爱歌，我想我很适合，当一个歌颂者。",
-        code: "1",
-    },
-    {
-        title: "窗透初晓 日照西桥 云自摇 想你当年荷风微摆的衣角",
-        code: "2",
-    },
-    {
-        title: "为你唱这首歌，没有什么风格，他仅仅代表着，我希望你快乐",
-        code: "3",
-    },
-    {
-        title: "儿时凿壁偷了谁家的光，宿洗不梳一苦十年寒窗，如今灯下闲读红袖添香",
-        code: "4",
-    }
-]
+// export const noticeList = [{
+//         title: "这是一首简单的小情歌，唱着人们心头的爱歌，我想我很适合，当一个歌颂者。",
+//         code: "1",
+//     },
+//     {
+//         title: "窗透初晓 日照西桥 云自摇 想你当年荷风微摆的衣角",
+//         code: "2",
+//     },
+//     {
+//         title: "为你唱这首歌，没有什么风格，他仅仅代表着，我希望你快乐",
+//         code: "3",
+//     },
+//     {
+//         title: "儿时凿壁偷了谁家的光，宿洗不梳一苦十年寒窗，如今灯下闲读红袖添香",
+//         code: "4",
+//     }
+// ]
 export const serviceList = [{
         title: "门诊服务",
         list: [{
