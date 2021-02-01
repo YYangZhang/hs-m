@@ -73,6 +73,15 @@ const routes = [{
         name: 'patientEdit',
         component: () => import('@/views/patient/patientEdit')
     },
+    {
+        // 选择就诊人列表
+        path: '/patientSelect',
+        name: 'patientSelect',
+        meta: {
+            title: "选择就诊人"
+        },
+        component: () => import('@/views/patient/patientSelect')
+    },
 ]
 
 const router = new VueRouter({

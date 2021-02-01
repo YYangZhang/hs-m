@@ -50,7 +50,7 @@ export default {
         },
         {
           title: "我的预约挂号",
-          to: "/menu",
+          to: "/patientSelect",
           icon: "coupon",
         },
         {
