@@ -82,6 +82,15 @@ const routes = [{
         },
         component: () => import('@/views/patient/patientSelect')
     },
+    {
+        // 预约挂号页面
+        path: '/orderRegister1',
+        name: 'orderRegister1',
+        meta: {
+            title: "预约挂号"
+        },
+        component: () => import('@/views/outPatientService/orderRegister/orderRegister1')
+    },
 ]
 
 const router = new VueRouter({

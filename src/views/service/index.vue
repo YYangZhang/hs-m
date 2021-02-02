@@ -39,7 +39,7 @@
           <van-grid-item
             v-for="(gridItem, index) in grid.list"
             :key="index"
-            @click="goto(gridItem.url)"
+            @click="goto(gridItem)"
           >
             <template #icon>
               <div class="gridIconDiv">
@@ -79,10 +79,15 @@ export default {
         query: { id: id },
       });
     },
-    goto(url) {
-      if (url) {
-        console.log("url" + url);
-        this.$router.push(url);
+    goto(item) {
+      // 添加就诊人
+      if (item.type) {
+        this.$router.push({
+          path: item.url,
+          query: { type: item.type },
+        });
+      } else {
+        this.$router.push(item.url);
       }
     },
   },

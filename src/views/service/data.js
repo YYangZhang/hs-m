@@ -27,12 +27,13 @@ export const serviceList = [{
         list: [{
                 icon: "iconbiaoqian",
                 text: "添加就诊人",
-                url: "",
+                type: "add",
+                url: "/patientEdit",
             },
             {
                 icon: "iconorder",
                 text: "预约挂号",
-                url: "",
+                url: "/orderRegister1",
             },
             {
                 icon: "iconfuwutai",
