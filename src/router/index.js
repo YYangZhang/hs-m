@@ -83,7 +83,7 @@ const routes = [{
         component: () => import('@/views/patient/patientSelect')
     },
     {
-        // 预约挂号页面
+        // 预约挂号页面1
         path: '/orderRegister1',
         name: 'orderRegister1',
         meta: {
@@ -92,13 +92,19 @@ const routes = [{
         component: () => import('@/views/outPatientService/orderRegister/orderRegister1')
     },
     {
-        // 预约挂号页面
+        // 预约挂号页面2
         path: '/orderRegister2',
         name: 'orderRegister2',
         meta: {
             title: "预约挂号"
         },
         component: () => import('@/views/outPatientService/orderRegister/orderRegister2')
+    },
+    {
+        // 预约挂号页面3
+        path: '/orderRegister3',
+        name: 'orderRegister3',
+        component: () => import('@/views/outPatientService/orderRegister/orderRegister3')
     },
 ]
 
