@@ -25,7 +25,12 @@
         </van-tabs>
       </div>
       <div class="menzhenType" v-if="active === '1'">
-        <div class="mzListItem" v-for="(item, i) in zhuanjiaList" :key="i" @click="gotoOrder">
+        <div
+          class="mzListItem"
+          v-for="(item, i) in zhuanjiaList"
+          :key="i"
+          @click="gotoOrder(item)"
+        >
           <div class="mzListItemIcon">
             <div class="icon">
               <van-image
@@ -47,7 +52,12 @@
         </div>
       </div>
       <div class="menzhenType" v-if="active === '2'">
-        <div class="mzListItem" v-for="(item, i) in menzhenList" :key="i" @click="gotoOrder">
+        <div
+          class="mzListItem"
+          v-for="(item, i) in menzhenList"
+          :key="i"
+          @click="gotoOrder(item)"
+        >
           <div class="mzListItemIcon">
             <i class="icon2 iconfont iconyiyuan1"></i>
           </div>
@@ -172,9 +182,18 @@ export default {
     choseDay(i) {
       this.current = i;
     },
-    gotoOrder(){
-      this.$router.push('/orderRegister3')
-    }
+    gotoOrder(params) {
+      // params["year"] = ;
+      // params["month"] = ;
+      params["date"] = this.days[this.current].year + '-' + this.days[this.current].month + '-' + this.days[this.current].date;
+      params["zhou"] = this.days[this.current].zhou;
+      params["type"] = this.active;
+      // console.log(params);
+      this.$router.push({
+        path: "/orderRegister3",
+        query: { params: JSON.stringify(params) },
+      });
+    },
   },
   created: function () {},
   activated() {

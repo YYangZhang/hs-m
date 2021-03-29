@@ -93,7 +93,7 @@ export default {
     loginAuth(){
       // 登录授权
       console.log('拉起了登录授权框')
-    }
+    },
   },
   created: function () {},
   activated() {},
