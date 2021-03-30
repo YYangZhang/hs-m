@@ -79,6 +79,11 @@
           </van-popup>
         </div>
       </div>
+      <div class="patientSelect">
+        <div class="changed">
+          aaa
+        </div>
+      </div>
     </div>
     <div class="btnarea">
       <div class="bottomDetail">
@@ -256,6 +261,18 @@ export default {
             background-color: #ffffff;
           }
         }
+      }
+    }
+    .patientSelect{
+      margin-top: 6px;
+      width: 100%;
+      .changed{
+        padding: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
       }
     }
   }
