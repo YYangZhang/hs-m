@@ -104,7 +104,37 @@ const routes = [{
         // 预约挂号页面3
         path: '/orderRegister3',
         name: 'orderRegister3',
+        meta: {
+            title: "预约挂号"
+        },
         component: () => import('@/views/outPatientService/orderRegister/orderRegister3')
+    },
+    {
+        // 预约成功页面
+        path: '/orderSuccess',
+        name: 'orderSuccess',
+        meta: {
+            title: "预约挂号"
+        },
+        component: () => import('@/views/outPatientService/orderRegister/orderSuccess')
+    },
+    {
+        // 挂号成功页面
+        path: '/registerSuccess',
+        name: 'registerSuccess',
+        meta: {
+            title: "预约挂号"
+        },
+        component: () => import('@/views/outPatientService/orderRegister/registerSuccess')
+    },
+    {
+        // 预约挂号失败页面
+        path: '/orderRegisterFailed',
+        name: 'orderRegisterFailed',
+        meta: {
+            title: "预约挂号"
+        },
+        component: () => import('@/views/outPatientService/orderRegister/orderRegisterFailed')
     },
 ]
 

@@ -33,15 +33,22 @@
       </div>
       <div class="div2">
         <div class="div3">
-          <span>就诊时间：
+          <span
+            >就诊时间：
             <span class="sp1">{{ params.date }} 周{{ params.zhou }}</span>
           </span>
-          <span class="sp2">诊查费
-            <span class="sp3">{{ price }}</span>元
+          <span class="sp2"
+            >诊查费 <span class="sp3">{{ price }}</span
+            >元
           </span>
         </div>
         <div class="div4">
-          <van-cell clickable @click="showPopup" title="请选择就诊时间段" is-link>
+          <van-cell
+            clickable
+            @click="showPopup"
+            title="请选择就诊时间段"
+            is-link
+          >
             <span style="color: #4379ee; font-weight: 600">{{
               selectTime ? selectTime : "暂未选择就诊时间"
             }}</span>
@@ -81,17 +88,48 @@
       </div>
       <div class="patientSelect">
         <div class="changed">
-          aaa
+          当前就诊人
+          <van-button plain round size="mini" class="btn"
+            >切换就诊人</van-button
+          >
+        </div>
+        <div class="patientDiv">
+          <div class="patientinfo">
+            <div class="patientIcon">
+              <van-image
+                width="100%"
+                height="100%"
+                :src="advatar"
+                fit="cover"
+                :round="true"
+                style="border: #badafc 2px solid"
+              />
+            </div>
+          </div>
+          <div class="patientName">无敌胖胖</div>
+          <div class="patientId">
+            <span class="idsp1">身份证号</span>
+            <span class="idsp2">320683111111111111</span>
+          </div>
         </div>
       </div>
     </div>
     <div class="btnarea">
       <div class="bottomDetail">
         <span>{{ selectTime ? "您已选择：" : "暂未选择就诊时间" }}</span>
-        <span v-if="selectTime"><span  style="margin-right:4px">{{ params.date }}</span>{{ selectTime }}</span>
+        <span v-if="selectTime"
+          ><span style="margin-right: 4px">{{ params.date }}</span
+          >{{ selectTime }}</span
+        >
       </div>
       <div class="bottomConfirm">
-        <van-button @click="gotoOrder" type="info" size="large" style="width: 100%; border: none; height: 100%">确定预约</van-button>
+        <van-button
+          @click="gotoOrder"
+          type="info"
+          size="large"
+          style="width: 100%; border: none; height: 100%"
+          >确定预约</van-button
+        >
       </div>
     </div>
   </div>
@@ -114,6 +152,7 @@ export default {
         { day: 2, time: "16:00-17:00" },
       ],
       params: [],
+      advatar: require("../../../assets/img/2.png"),
     };
   },
   watch: {},
@@ -143,14 +182,13 @@ export default {
       this.selectTime = item;
       this.cancelPopup();
     },
-    gotoOrder(){
+    gotoOrder() {
       // 跳转页面 如果没有选择时间则不跳转并提醒
-      if(this.selectTime){
-
-      }else{
-
+      if (this.selectTime) {
+        this.$router.push("/orderSuccess")
+      } else {
       }
-    }
+    },
   },
   created: function () {
     this.getParams();
@@ -263,16 +301,52 @@ export default {
         }
       }
     }
-    .patientSelect{
+    .patientSelect {
       margin-top: 6px;
       width: 100%;
-      .changed{
-        padding: 12px;
+      background-color: #ffffff;
+      .changed {
+        font-size: 14px;
+        padding: 12px 24px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        .btn {
+          padding: 1px 10px 0 10px;
+        }
+      }
+      .patientDiv {
+        padding: 14px 0 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .patientinfo {
+          margin: 0 auto;
+          .patientIcon {
+            width: 66px;
+            height: 66px;
+          }
+        }
+        .patientName {
+          text-align: center;
+          padding-top: 14px;
+          font-size: 15px;
+        }
+        .patientId {
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
+          font-size: 12px;
+          .idsp1{
+            color: #000000;
+            margin-right: 36px;
+          }
+          .idsp2{
+            color: #666666;
+          }
+        }
       }
     }
   }
