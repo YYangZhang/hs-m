@@ -185,7 +185,10 @@ export default {
     gotoOrder() {
       // 跳转页面 如果没有选择时间则不跳转并提醒
       if (this.selectTime) {
+<<<<<<< HEAD
         this.$router.push("/orderSuccess")
+=======
+>>>>>>> 1d7cfbe652b1691f2df25396f484176bc336dea2
       } else {
       }
     },
